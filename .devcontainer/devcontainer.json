@@ -1,12 +1,15 @@
 {
-  "name": "Development Container",
-  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
-  "features": {
-    "ghcr.io/wandb/catnip/feature:1": {}
-  },
-  "forwardPorts": [
-    6369,
-    3001
-  ],
-  "postAttachCommand": "bash /workspaces/Claude-code/setup.sh"
+“name”: “Development Container”,
+“image”: “mcr.microsoft.com/devcontainers/base:ubuntu”,
+“features”: {
+“ghcr.io/wandb/catnip/feature:1”: {},
+“ghcr.io/devcontainers/features/node:1”: {
+“version”: “20”
+}
+},
+“forwardPorts”: [
+6369,
+3001
+],
+“postAttachCommand”: “bash /workspaces/Claude-code/setup.sh”
 }
